@@ -9,4 +9,4 @@ set(SOURCES
 add_executable(osutils_test ${SOURCES})
 target_link_libraries(osutils_test osutils)
 
-add_test (NAME MyTest COMMAND osutils_test)
+add_test (NAME osutils_test COMMAND osutils_test --home $ENV{HOME})

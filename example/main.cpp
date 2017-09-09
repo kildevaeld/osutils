@@ -13,5 +13,9 @@ int main(int argc, char **argv) {
     std::cout << path.push("test") << std::endl;
   }
 
+  std::cout << "Home " << home_dir() << "\n" 
+  << "Temp " << tmp_dir() << "\n"
+  << "Plaform " << platform_name() << std::endl;
+
   return 0;
 }

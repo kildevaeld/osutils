@@ -1,6 +1,7 @@
 #include <iostream>
 #include <locale>
 #include <osutils/filepath.hpp>
+#include <experimental/filesystem>
 
 OSUTILS_NS_BEGIN
 
@@ -43,6 +44,7 @@ filepath::filepath(const std::string &p) : d(new internal::filepath_private()) {
 
 filepath::filepath(const filepath &other) : d(new internal::filepath_private) {
   d->path = other.d->path;
+  d->is_valid = other.d->is_valid;
 }
 
 filepath::~filepath() {}

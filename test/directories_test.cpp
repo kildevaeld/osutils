@@ -2,6 +2,9 @@
 #include <iostream>
 #include <osutils/directories.hpp>
 
+extern std::string HomeDir;
+
 TEST_CASE("", "[directories]") {
-  std::cout << osutils::home_dir() << std::endl;
+  REQUIRE(strcmp(osutils::home_dir(), HomeDir.c_str()) == 0);
+  std::cout << osutils::tmp_dir() <<std::endl;
 }
